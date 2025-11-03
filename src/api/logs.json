@@ -1,0 +1,388 @@
+[
+  {
+    "timestamp": "2025-11-03T08:00:01Z",
+    "level": "INFO",
+    "message": "Server started successfully on port 3000",
+    "service": "api-server"
+  },
+  {
+    "timestamp": "2025-11-03T08:00:15Z",
+    "level": "INFO",
+    "message": "Database connection established",
+    "service": "database",
+    "host": "localhost:5432"
+  },
+  {
+    "timestamp": "2025-11-03T08:05:23Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/users",
+    "statusCode": 200,
+    "responseTime": 123,
+    "method": "GET",
+    "path": "/api/users",
+    "ip": "192.168.1.100"
+  },
+  {
+    "timestamp": "2025-11-03T08:06:45Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/auth/login",
+    "statusCode": 200,
+    "responseTime": 245,
+    "method": "POST",
+    "path": "/api/auth/login",
+    "ip": "192.168.1.101",
+    "userId": "user_12345"
+  },
+  {
+    "timestamp": "2025-11-03T08:10:12Z",
+    "level": "WARNING",
+    "message": "Slow query detected: SELECT * FROM users WHERE status='active'",
+    "service": "database",
+    "queryTime": 3500,
+    "threshold": 1000
+  },
+  {
+    "timestamp": "2025-11-03T08:12:34Z",
+    "level": "ERROR",
+    "message": "Failed to authenticate user: Invalid credentials",
+    "statusCode": 401,
+    "method": "POST",
+    "path": "/api/auth/login",
+    "ip": "192.168.1.105",
+    "attemptCount": 3
+  },
+  {
+    "timestamp": "2025-11-03T08:15:20Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/products?category=electronics",
+    "statusCode": 200,
+    "responseTime": 89,
+    "method": "GET",
+    "path": "/api/products",
+    "ip": "192.168.1.102"
+  },
+  {
+    "timestamp": "2025-11-03T08:18:45Z",
+    "level": "WARNING",
+    "message": "Memory usage exceeds 80%",
+    "service": "system-monitor",
+    "currentUsage": "85%",
+    "availableMemory": "1.2GB"
+  },
+  {
+    "timestamp": "2025-11-03T08:20:30Z",
+    "level": "ERROR",
+    "message": "Database connection timeout",
+    "service": "database",
+    "host": "localhost:5432",
+    "timeout": 5000,
+    "error": "Connection timed out after 5000ms"
+  },
+  {
+    "timestamp": "2025-11-03T08:22:15Z",
+    "level": "INFO",
+    "message": "Request received: PUT /api/users/12345",
+    "statusCode": 200,
+    "responseTime": 156,
+    "method": "PUT",
+    "path": "/api/users/12345",
+    "ip": "192.168.1.100"
+  },
+  {
+    "timestamp": "2025-11-03T08:25:40Z",
+    "level": "ERROR",
+    "message": "File upload failed: Maximum file size exceeded",
+    "statusCode": 413,
+    "method": "POST",
+    "path": "/api/upload",
+    "ip": "192.168.1.103",
+    "fileSize": "15MB",
+    "maxSize": "10MB"
+  },
+  {
+    "timestamp": "2025-11-03T08:28:22Z",
+    "level": "WARNING",
+    "message": "High number of failed login attempts detected",
+    "service": "security",
+    "ip": "192.168.1.105",
+    "attemptCount": 10,
+    "timeWindow": "5 minutes"
+  },
+  {
+    "timestamp": "2025-11-03T08:30:50Z",
+    "level": "INFO",
+    "message": "Cache cleared successfully",
+    "service": "cache-manager",
+    "itemsCleared": 1250
+  },
+  {
+    "timestamp": "2025-11-03T08:32:18Z",
+    "level": "ERROR",
+    "message": "Payment processing failed: Gateway timeout",
+    "statusCode": 504,
+    "service": "payment-gateway",
+    "transactionId": "txn_789456123",
+    "amount": 99.99,
+    "currency": "USD"
+  },
+  {
+    "timestamp": "2025-11-03T08:35:05Z",
+    "level": "INFO",
+    "message": "Request received: DELETE /api/users/67890",
+    "statusCode": 204,
+    "responseTime": 78,
+    "method": "DELETE",
+    "path": "/api/users/67890",
+    "ip": "192.168.1.100"
+  },
+  {
+    "timestamp": "2025-11-03T08:38:42Z",
+    "level": "CRITICAL",
+    "message": "Server crash: Unhandled exception in main thread",
+    "service": "api-server",
+    "error": "TypeError: Cannot read property 'id' of undefined",
+    "stack": "at processRequest (app.js:145:22)\n    at Layer.handle (express/lib/router/layer.js:95:5)"
+  },
+  {
+    "timestamp": "2025-11-03T08:39:10Z",
+    "level": "INFO",
+    "message": "Server restart initiated",
+    "service": "api-server",
+    "reason": "crash recovery"
+  },
+  {
+    "timestamp": "2025-11-03T08:39:25Z",
+    "level": "INFO",
+    "message": "Server started successfully on port 3000",
+    "service": "api-server"
+  },
+  {
+    "timestamp": "2025-11-03T08:40:00Z",
+    "level": "WARNING",
+    "message": "API rate limit exceeded",
+    "statusCode": 429,
+    "method": "GET",
+    "path": "/api/data",
+    "ip": "192.168.1.110",
+    "requestCount": 1050,
+    "limit": 1000,
+    "timeWindow": "1 hour"
+  },
+  {
+    "timestamp": "2025-11-03T08:42:33Z",
+    "level": "ERROR",
+    "message": "Failed to send email notification",
+    "service": "email-service",
+    "recipient": "user@example.com",
+    "error": "SMTP connection refused"
+  },
+  {
+    "timestamp": "2025-11-03T08:45:17Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders?status=pending",
+    "statusCode": 200,
+    "responseTime": 201,
+    "method": "GET",
+    "path": "/api/orders",
+    "ip": "192.168.1.104"
+  },
+  {
+    "timestamp": "2025-11-03T08:48:55Z",
+    "level": "WARNING",
+    "message": "Disk space running low",
+    "service": "system-monitor",
+    "partition": "/var/log",
+    "availableSpace": "2GB",
+    "usedPercentage": "92%"
+  },
+  {
+    "timestamp": "2025-11-03T08:50:20Z",
+    "level": "ERROR",
+    "message": "External API call failed: Connection refused",
+    "service": "external-api",
+    "endpoint": "https://api.external-service.com/data",
+    "error": "ECONNREFUSED",
+    "retryAttempt": 3
+  },
+  {
+    "timestamp": "2025-11-03T08:52:40Z",
+    "level": "INFO",
+    "message": "Scheduled backup completed successfully",
+    "service": "backup-manager",
+    "backupSize": "4.5GB",
+    "duration": 320
+  },
+  {
+    "timestamp": "2025-11-03T08:55:12Z",
+    "level": "WARNING",
+    "message": "SSL certificate expires soon",
+    "service": "security",
+    "domain": "api.example.com",
+    "expiryDate": "2025-11-15",
+    "daysRemaining": 12
+  },
+  {
+    "timestamp": "2025-11-03T08:58:30Z",
+    "level": "ERROR",
+    "message": "Database query failed: Syntax error",
+    "service": "database",
+    "query": "SELECT * FROM orders WHERE user_id = AND status='pending'",
+    "error": "syntax error at or near 'AND'"
+  },
+  {
+    "timestamp": "2025-11-03T09:00:45Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/orders",
+    "statusCode": 201,
+    "responseTime": 345,
+    "method": "POST",
+    "path": "/api/orders",
+    "ip": "192.168.1.106"
+  },
+  {
+    "timestamp": "2025-11-03T09:03:22Z",
+    "level": "CRITICAL",
+    "message": "Out of memory error",
+    "service": "api-server",
+    "error": "JavaScript heap out of memory",
+    "heapUsed": "2048MB",
+    "heapTotal": "2048MB"
+  },
+  {
+    "timestamp": "2025-11-03T09:03:45Z",
+    "level": "INFO",
+    "message": "Emergency server restart triggered",
+    "service": "api-server",
+    "reason": "memory overflow"
+  },
+  {
+    "timestamp": "2025-11-03T09:04:10Z",
+    "level": "INFO",
+    "message": "Server started successfully on port 3000",
+    "service": "api-server"
+  },
+  {
+    "timestamp": "2025-11-03T09:05:30Z",
+    "level": "WARNING",
+    "message": "Deprecated API endpoint accessed",
+    "method": "GET",
+    "path": "/api/v1/legacy/users",
+    "ip": "192.168.1.108",
+    "deprecationDate": "2025-12-01",
+    "newEndpoint": "/api/v2/users"
+  },
+  {
+    "timestamp": "2025-11-03T09:08:15Z",
+    "level": "ERROR",
+    "message": "Failed to validate user input: Missing required field",
+    "statusCode": 400,
+    "method": "POST",
+    "path": "/api/users",
+    "ip": "192.168.1.109",
+    "missingField": "email"
+  },
+  {
+    "timestamp": "2025-11-03T09:10:50Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/health",
+    "statusCode": 200,
+    "responseTime": 5,
+    "method": "GET",
+    "path": "/api/health",
+    "ip": "192.168.1.1"
+  },
+  {
+    "timestamp": "2025-11-03T09:12:33Z",
+    "level": "WARNING",
+    "message": "Unusual traffic pattern detected",
+    "service": "security",
+    "ip": "192.168.1.120",
+    "requestsPerSecond": 150,
+    "normalRate": 10
+  },
+  {
+    "timestamp": "2025-11-03T09:15:40Z",
+    "level": "ERROR",
+    "message": "Third-party service unavailable",
+    "statusCode": 503,
+    "service": "external-api",
+    "endpoint": "https://maps.googleapis.com/geocode",
+    "error": "Service Temporarily Unavailable"
+  },
+  {
+    "timestamp": "2025-11-03T09:18:25Z",
+    "level": "INFO",
+    "message": "User session expired",
+    "service": "session-manager",
+    "userId": "user_54321",
+    "sessionDuration": 7200
+  },
+  {
+    "timestamp": "2025-11-03T09:20:10Z",
+    "level": "WARNING",
+    "message": "CPU usage spike detected",
+    "service": "system-monitor",
+    "currentUsage": "95%",
+    "averageUsage": "45%",
+    "duration": 120
+  },
+  {
+    "timestamp": "2025-11-03T09:22:55Z",
+    "level": "ERROR",
+    "message": "WebSocket connection failed",
+    "service": "websocket-server",
+    "error": "Connection reset by peer",
+    "clientId": "client_abc123"
+  },
+  {
+    "timestamp": "2025-11-03T09:25:30Z",
+    "level": "INFO",
+    "message": "Request received: PATCH /api/users/12345/settings",
+    "statusCode": 200,
+    "responseTime": 92,
+    "method": "PATCH",
+    "path": "/api/users/12345/settings",
+    "ip": "192.168.1.100"
+  },
+  {
+    "timestamp": "2025-11-03T09:28:15Z",
+    "level": "CRITICAL",
+    "message": "Database server connection lost",
+    "service": "database",
+    "host": "localhost:5432",
+    "error": "Server closed the connection unexpectedly",
+    "impact": "All database operations failing"
+  },
+  {
+    "timestamp": "2025-11-03T09:30:00Z",
+    "level": "INFO",
+    "message": "Database connection restored",
+    "service": "database",
+    "host": "localhost:5432",
+    "reconnectAttempts": 5
+  },
+  {
+    "timestamp": "2025-11-03 16:32:49",
+    "level": "INFO",
+    "status": "N/A",
+    "message": "JSON Server running on PORT 4000"
+  },
+  {
+    "timestamp": "2025-11-03 17:15:59",
+    "level": "INFO",
+    "status": "N/A",
+    "message": "JSON Server running on PORT 4000"
+  },
+  {
+    "timestamp": "2025-11-03T17:37:55.456Z",
+    "level": "INFO",
+    "status": "N/A",
+    "message": "JSON Server running on PORT 4000"
+  },
+  {
+    "timestamp": "2025-11-03T17:38:52.815Z",
+    "level": "INFO",
+    "status": "N/A",
+    "message": "JSON Server running on PORT 4000"
+  }
+]
